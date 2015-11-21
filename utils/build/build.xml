@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 
 
-<project name="testJenkins" default="ci" basedir=".">
+<project name="testJenkins" default="ci" basedir="/ressources">
     <property name="source" value="ressources" />
 
     <target name="ci"
