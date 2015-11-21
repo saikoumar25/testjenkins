@@ -9,6 +9,7 @@
         description="Tâche principale d'intégration continue"
         depends="clean,qa"
     />
+    <!-- a changer -->
 
     <target name="clean" description="Vide les répertoires d'artefacts">
         <delete dir="${project.basedir}/ressources/api" />
