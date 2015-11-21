@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 
 
-<project name="testJenkins" default="ci" basedir="/ressources">
-    <property name="source" value="ressources" />
-
-    <target name="ci"
+<project name="testJenkins" default="build" basedir=".">
+    <property name="basedir" value="${project.basedir}" />
+    <property name="source" value="${project.basedir}/ressources" />
+    
+    <target name="build"
         description="Tâche principale d'intégration continue"
         depends="clean,qa"
     />
 
     <target name="clean" description="Vide les répertoires d'artefacts">
-        <delete dir="${project.basedir}/build/api" />
-        <delete dir="${project.basedir}/build/code-browser" />
-        <delete dir="${project.basedir}/build/coverage" />
-        <delete dir="${project.basedir}/build/logs" />
-        <delete dir="${project.basedir}/build/pdepend" />
+        <delete dir="${project.basedir}/ressources/api" />
+        <delete dir="${project.basedir}/ressources/code-browser" />
+        <delete dir="${project.basedir}/ressources/coverage" />
+        <delete dir="${project.basedir}/ressources/logs" />
+        <delete dir="${project.basedir}/ressources/pdepend" />
 
-        <mkdir dir="${project.basedir}/build/api" />
-        <mkdir dir="${project.basedir}/build/code-browser" />
-        <mkdir dir="${project.basedir}/build/coverage" />
-        <mkdir dir="${project.basedir}/build/logs" />
-        <mkdir dir="${project.basedir}/build/pdepend" />
+        <mkdir dir="${project.basedir}/ressources/api" />
+        <mkdir dir="${project.basedir}/ressources/code-browser" />
+        <mkdir dir="${project.basedir}/ressources/coverage" />
+        <mkdir dir="${project.basedir}/ressources/logs" />
+        <mkdir dir="${project.basedir}/ressources/pdepend" />
 
     </target>
 
@@ -34,3 +30,4 @@ and open the template in the editor.
     </target>
 
 </project>
+
