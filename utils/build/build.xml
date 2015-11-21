@@ -6,8 +6,8 @@ and open the template in the editor.
 -->
 
 
-<project name="testJenkins" default="ci" basedir="../../..">
-    <property name="source" value="src" />
+<project name="testJenkins" default="ci" basedir=".">
+    <property name="source" value="ressources" />
 
     <target name="ci"
         description="Tâche principale d'intégration continue"
