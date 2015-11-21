@@ -6,6 +6,20 @@ and open the template in the editor.
 -->
 
 
-<root>
-    
-</root>
+<project name="testJenkins" default="ci" basedir="../../..">
+    <property name="source" value="src" />
+
+    <target name="ci"
+        description="Tâche principale d'intégration continue"
+        depends="clean,qa"
+    />
+
+    <target name="clean" description="Vide les répertoires d'artefacts">
+
+    </target>
+
+    <target name="qa" description="Lance les outils d'analyse">
+
+    </target>
+
+</project>
