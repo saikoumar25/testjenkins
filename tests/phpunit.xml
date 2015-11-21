@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<phpunit>
+    <testsuites>
+        <testsuite name="My Test Suite">
+            <directory>./</directory>
+        </testsuite>
+    </testsuites>
 
+    <filter>
+        <whitelist>
+            <directory suffix=".php">../www</directory>
+        </whitelist>
+    </filter>
 
-<root>
-    
-</root>
+    <logging>
+        <log type="coverage-html" target="../../ressources/coverage" title="Name of Project"
+             charset="UTF-8" yui="true" highlight="true"
+             lowUpperBound="35" highLowerBound="70"/>
+        <log type="coverage-clover" target="../../ressources/logs/clover.xml"/>
+        <log type="junit" target="../../ressources/logs/junit.xml" logIncompleteSkipped="false"/>
+    </logging>
+</phpunit>
