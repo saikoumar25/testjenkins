@@ -46,9 +46,9 @@
             <formatter type="xml" outfile="${project.basedir}/ressources/phpmd.xml" />
         </phpmd>
     </target>
-    <!--target name="phpunit">
+    <target name="phpunit">
         <exec logoutput="true" dir="${project.basedir}/${source}/tests" command="phpunit" escape="false" />
-    </target-->
+    </target>
     
 </project>
 
