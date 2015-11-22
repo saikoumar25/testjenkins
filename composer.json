@@ -1,0 +1,10 @@
+{
+    "require": {
+
+        "pdepend/pdepend" : "2.2.1"
+    }
+
+
+}
+
+
