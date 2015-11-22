@@ -29,7 +29,7 @@
     <target name="qa" description="Lance les outils d'analyse">
         <phingcall target="pdepend" />
         <phingcall target="phpmd" />
-        <!--phingcall target="phpunit" /-->
+        <phingcall target="phpunit" />
     </target>
     <target name="pdepend">
             <phpdepend file="${project.basedir}/www">
