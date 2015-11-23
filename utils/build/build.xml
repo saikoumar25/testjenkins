@@ -20,14 +20,17 @@
         <mkdir dir="${project.basedir}/build/logs" />
         <mkdir dir="${project.basedir}/build/pdepend" />
     </target>
-
-
     <target name="qa" description="Lance les outils d'analyse">
-        <phingcall target="premier-outil" />
-        <phingcall target="second-outil" />
-        <phingcall target="troisime-outil" />
+        <phingcall target="pdepend" />
+        <phingcall target="phpmd" />
+        <phingcall target="phpcpd" />
+        <phingcall target="phploc" />
+        <phingcall target="phpcs" />
+        <phingcall target="phpdoc" />
+        <phingcall target="phpunit" />
+        <phingcall target="phpcb" />
     </target>
-    
+
     <target name="pdepend">
         <phpdepend file="${project.basedir}/${source}/www">
             <logger type="jdepend-xml" outfile="${project.basedir}/build/logs/jdepend.xml" />
